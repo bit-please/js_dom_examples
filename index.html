@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Example</title>
+
+  <style>
+  	.hidden {
+  		display: none;
+  	}
+  </style>
+
+</head>
+<body>
+  <h1 onclick="hideParagraph()">Alexander Hamilton</h1>
+  <p onclick="doSomethingElse()">Alexander Hamilton (January 11, 1755 or 1757 – July 12, 1804) was an American statesman and one of the Founding Fathers of the United States. He was an influential interpreter and promoter of the U.S. Constitution, as well as the founder of the nation's financial system, the Federalist Party, the United States Coast Guard, and The New York Post newspaper.</p>
+
+  <p>The x coordinate is:</p>
+  <p class="x-coordinate"></p>
+  <p>The y coordinate is:</p>
+  <p class="y-coordinate"></p>
+
+  <script>
+  	function doSomething() {
+  		console.log("You clicked on the header!");
+  	}
+  	function doSomethingElse() {
+  		console.log("You clicked on the p tag!");
+  	}
+  	function showCoords(event) {
+  		var xtag = document.querySelector('.x-coordinate');
+  		var ytag = document.querySelector('.y-coordinate');
+  		xtag.innerText = event.clientX;
+  		ytag.innerText = event.clientY;
+  	}
+  	function hideParagraph() {
+  		var ptag = document.querySelector('p');
+  		ptag.classList.add('hidden');
+  	}
+  </script>
+
+</body>
+</html>
